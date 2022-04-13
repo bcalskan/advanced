@@ -23,12 +23,14 @@ public class Arrays12 {
         int[] arr = new int[n];             // n elemanli bir array olusturuldu.
 
 
+
         for (int i = 0; i < n; i++) {
             System.out.print(i + 1 + ". elemani giriniz : ");
             int eleman = scan.nextInt();    // array´e teker teker eleman atandi.
             arr[i] = eleman;
         }
         System.out.println("Arr : " + Arrays.toString(arr));   // arr yazdirildi.
+
 
 
         int temp[] = new int[arr.length];   // arr uzunlugunda yeni bir array olusturuldu --> reverse icin
