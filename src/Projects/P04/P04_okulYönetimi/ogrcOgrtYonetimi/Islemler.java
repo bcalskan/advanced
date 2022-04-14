@@ -26,7 +26,6 @@ public class Islemler {
                 kisiTuru = "OGRETMEN";
                 islemMenusu();
                 break;
-
             case "Q":
                 cıkıs();
                 break;
