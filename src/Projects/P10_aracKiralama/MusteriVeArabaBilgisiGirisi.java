@@ -7,10 +7,13 @@ import java.util.Scanner;
 public class MusteriVeArabaBilgisiGirisi extends AracTalebi {
 
     static List<AracTalebi> aracTalebiList = new ArrayList<>();
-
     static Scanner scan = new Scanner(System.in);
-
     static int toplamGun;
+
+
+
+
+
 
     public static void aracTalep() {
         System.out.println("Lutfen araci alacaginiz sehri giriniz:");
@@ -47,10 +50,14 @@ public class MusteriVeArabaBilgisiGirisi extends AracTalebi {
         }else{
 
         }
-        toplamGun= (intTAy-intAAy)*30 + (intTGunu-intAGunu);
+        toplamGun= (intTAy-intAAy)*30 + (intTGunu-intAGunu);  // günlüük 150E
         System.out.println("Odenecek toplam gun ayisi: "+toplamGun);
         System.out.println("************************************");
     }
+
+
+
+
 
     public static void getAraba(String marka, String model, String yakitTipi,String vites, Integer gunlukUcret){
     aracTalebiList.stream().
@@ -58,6 +65,11 @@ public class MusteriVeArabaBilgisiGirisi extends AracTalebi {
             t.getYakitTipi().equalsIgnoreCase(yakitTipi)&& t.getVites().equalsIgnoreCase(vites)).
             forEach(System.out::println);
     }
+
+
+
+
+
     public static void islemeDevamDongusu(){
         System.out.println("Devam etmek istiyorsaniz 'e' ye, istemiyorsaniz 'h' ye basin");
         String devam = scan.next();
@@ -67,6 +79,10 @@ public class MusteriVeArabaBilgisiGirisi extends AracTalebi {
             arabalar();
         }
     }
+
+
+
+
 
 
     public static void arabalar() {
@@ -200,6 +216,10 @@ public class MusteriVeArabaBilgisiGirisi extends AracTalebi {
         }
 
 
+
+
+
+
     }
     public static void musteriBilgisi(){
         System.out.println("************************************");
@@ -222,6 +242,10 @@ public class MusteriVeArabaBilgisiGirisi extends AracTalebi {
 
         System.out.println("************************************");
     }
+
+
+
+
     public static void odemeBilgileri(){
         System.out.println("Lutfen kredi karti numaranizi giriniz: ");
         String kKarti= scan.nextLine();
