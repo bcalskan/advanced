@@ -1,6 +1,6 @@
 package yeniSorular;
 
-public class IfElse_2 {
+public class IfElse_2_Ok {
     public static void main(String[] args) {
 
         int gun = 5000, aritilansu = 5000;

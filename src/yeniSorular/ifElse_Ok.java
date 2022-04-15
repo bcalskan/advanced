@@ -2,7 +2,7 @@ package yeniSorular;
 
 import java.util.Scanner;
 
-public class ifElse {
+public class ifElse_Ok {
     static Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
