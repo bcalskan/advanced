@@ -103,126 +103,118 @@ public class Method {
         switch (secim) {
 
             case 1: {
-                System.out.println("Kitap adi giriniz :");
-                scan.next();
+                System.out.print("Kitap adini giriniz : ");
+                scan.nextLine();// dummy scan
                 String kitapAdi = scan.nextLine();
-                boolean varMi = true;
-                int i = 0;
+                System.out.println("Kitap Adi : " + kitapAdi);
+                int kontrol = 0; // kitap yoksa 0, varsa 1
+                System.out.println("Isleminizin sonucunu asagidaki gibi gorebilirsiniz.");
 
-                while (varMi) {
-                    if (kitapListesi.get(i).getKitapAdi().equalsIgnoreCase(kitapAdi)) {
-                        System.out.println("Isleminizin sonucunu asagidaki gibi gorebilirsiniz.");
-                        System.out.print("Kitap adi : " + kitapListesi.get(i).getKitapAdi() +
-                                "Yazar adi : " + kitapListesi.get(i).getYazarAdi() +
-                                "Kitap no : " + kitapListesi.get(i).getKitapNo() +
-                                "Kitap fiyati :" + kitapListesi.get(i).getKitapFiyat());
-                        i++;
-                    } else System.out.println("Kitap bulunamadi.");
-                    break;
-                }
-            }
+                for (KitapciDeposu each : kitapListesi) {
+                    if (each.getKitapAdi().equalsIgnoreCase(kitapAdi)) {
+                        System.out.println("*************");
+                        System.out.println("Kitap Adi\t\t\t: " + each.getKitapAdi());
+                        System.out.println("Kitap Yazari\t\t: " + each.getYazarAdi());
+                        System.out.println("Kitap No\t\t\t: " + each.getKitapNo());
+                        System.out.println("Kitap Fiyati\t\t: " + each.getKitapFiyat() + " TL");
+                        System.out.println("*************"); // her kitap bilgisi arasina eklemek icin
+                        kontrol++;
 
-            while (true) {
-                System.out.println("\nIsleminize devam etmek istiyorsaniz 1'e\nCikis yapmak icin 0'a basiniz");
-                try {
-                    secim = scan.nextInt();
-                    if (secim == 1) {
-                        numaraIleKitap();
-                    } else if (secim == 0) {
-                        anaMenu();
-                    } else {
-                        System.out.println("Lutfen gecerli bir islem giriniz");
-                        bilgiIleKitap();
                     }
-
-                } catch (Exception e) {
-                    //e.printStackTrace();
-                    String str = scan.next();
+                }
+                if (kontrol == 0) {
+                    System.out.println("Aradiginiz kitap bulunamamistir");
+                }
+                while (true) {
+                    System.out.println("Isleminize devam etmek istiyorsaniz 1'e\nCikis yapmak icin 0'a basiniz");
+                    try {
+                        secim = scan.nextInt();
+                        if (secim == 1) numaraIleKitap();
+                        else if (secim == 0) anaMenu();
+                    } catch (Exception e) {
+                        //e.printStackTrace();
+                        String str = scan.next();
+                        System.out.println("Lutfen gecerli bir islem giriniz");
+                    }
                 }
             }
 
 
             case 2: {
-                System.out.println("Yazar adi giriniz :");
+                System.out.print("Yazar adini giriniz : ");
+                scan.nextLine();// dummy scan
                 String yazarAdi = scan.nextLine();
-                scan.next();
-                boolean varMi = true;
+                System.out.println("Yazar Adi : " + yazarAdi);
+                int kontrol = 0; // kitap yoksa 0, varsa 1
+                System.out.println("Isleminizin sonucunu asagidaki gibi gorebilirsiniz.");
 
-                int i = 0;
+                for (KitapciDeposu each : kitapListesi) {
+                    if (each.getYazarAdi().equalsIgnoreCase(yazarAdi)) {
+                        System.out.println("*************");
+                        System.out.println("Kitap Adi\t\t\t: " + each.getKitapAdi());
+                        System.out.println("Kitap Yazari\t\t: " + each.getYazarAdi());
+                        System.out.println("Kitap No\t\t\t: " + each.getKitapNo());
+                        System.out.println("Kitap Fiyati\t\t: " + each.getKitapFiyat() + " TL");
+                        System.out.println("*************"); // her kitap bilgisi arasina eklemek icin
+                        kontrol++;
 
-                while (varMi) {
-
-                    if (kitapListesi.get(i).getYazarAdi().equalsIgnoreCase(yazarAdi)) {
-                        System.out.println("Isleminizin sonucunu asagidaki gibi gorebilirsiniz.");
-
-                        System.out.print("Kitap adi : " + kitapListesi.get(i).getKitapAdi() +
-                                "Yazar adi : " + kitapListesi.get(i).getYazarAdi() +
-                                "Kitap no : " + kitapListesi.get(i).getKitapNo() +
-                                "Kitap fiyati :" + kitapListesi.get(i).getKitapFiyat());
-
-                        i++;
-                    }else {
-                        System.out.println("Yazar bulunamadi.");
-                        break;
                     }
                 }
-
-            }
-
-
-            while (true) {
-                System.out.println("\nIsleminize devam etmek istiyorsaniz 1'e\nCikis yapmak icin 0'a basiniz");
-                try {
-                    secim = scan.nextInt();
-                    if (secim == 1) {
-                        numaraIleKitap();
-                    } else if (secim == 0) {
-                        anaMenu();
-                    } else {
+                if (kontrol == 0) {
+                    System.out.println("Aradiginiz kitap bulunamamistir");
+                }
+                while (true) {
+                    System.out.println("Isleminize devam etmek istiyorsaniz 1'e\nCikis yapmak icin 0'a basiniz");
+                    try {
+                        secim = scan.nextInt();
+                        if (secim == 1) numaraIleKitap();
+                        else if (secim == 0) anaMenu();
+                    } catch (Exception e) {
+                        //e.printStackTrace();
+                        String str = scan.next();
                         System.out.println("Lutfen gecerli bir islem giriniz");
-                        bilgiIleKitap();
                     }
-
-                } catch (Exception e) {
-                    //e.printStackTrace();
-                    String str = scan.next();
                 }
             }
-
 
             case 3: {
-                System.out.println("Kitap fiyati giriniz :");
+                System.out.print("Kitap fiyati giriniz : ");
+                scan.nextLine();// dummy scan
                 int kitapFiyati = scan.nextInt();
-                boolean varMi = false;
+                System.out.println("Kitap Adi : " + kitapFiyati);
+                int kontrol = 0; // kitap yoksa 0, varsa 1
+                System.out.println("Isleminizin sonucunu asagidaki gibi gorebilirsiniz.");
 
+                for (KitapciDeposu each : kitapListesi) {
+                    if (each.getKitapFiyat() == kitapFiyati) {
+                        System.out.println("*************");
+                        System.out.println("Kitap Adi\t\t\t: " + each.getKitapAdi());
+                        System.out.println("Kitap Yazari\t\t: " + each.getYazarAdi());
+                        System.out.println("Kitap No\t\t\t: " + each.getKitapNo());
+                        System.out.println("Kitap Fiyati\t\t: " + each.getKitapFiyat() + " TL");
+                        System.out.println("*************"); // her kitap bilgisi arasina eklemek icin
+                        kontrol++;
 
-                int i = 0;
-                do {
-                    if (kitapListesi.get(i).getKitapFiyat() == kitapFiyati) {
-                        System.out.println("Isleminizin sonucunu asagidaki gibi gorebilirsiniz.");
-                        System.out.print("Kitap adi : " + kitapListesi.get(i).getKitapAdi() +
-                                "Yazar adi : " + kitapListesi.get(i).getYazarAdi() +
-                                "Kitap no : " + kitapListesi.get(i).getKitapNo() +
-                                "Kitap fiyati :" + kitapListesi.get(i).getKitapFiyat());
                     }
-                    i++;
-                } while (varMi == true);
-
-                if (varMi) System.out.println("Fiyat bulunamadi.");
-            }
-
-            while (true) {
-                System.out.println("Isleminize devam etmek istiyorsaniz 1'e\nCikis yapmak icin 0'a basiniz");
-                try {
-                    secim = scan.nextInt();
-                    if (secim == 1) numaraIleKitap();
-                    else if (secim == 0) anaMenu();
-                } catch (Exception e) {
-                    //e.printStackTrace();
-                    String str = scan.next();
-                    System.out.println("Lutfen gecerli bir islem giriniz");
+                }
+                if (kontrol == 0) {
+                    System.out.println("Aradiginiz kitap bulunamamistir");
+                }
+                while (true) {
+                    System.out.println("Isleminize devam etmek istiyorsaniz 1'e\nCikis yapmak icin 0'a basiniz");
+                    try {
+                        secim = scan.nextInt();
+                        if (secim == 1) numaraIleKitap();
+                        else if (secim == 0) anaMenu();
+                    } catch (Exception e) {
+                        //e.printStackTrace();
+                        String str = scan.next();
+                        System.out.println("Lutfen gecerli bir islem giriniz");
+                    }
                 }
             }
+
+
             case 0:
                 anaMenu();
                 break;
