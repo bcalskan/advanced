@@ -16,6 +16,15 @@ public class Ex04 {
 			 	
 			 */
 
+        LinkedList<String> ll1 = new LinkedList<String>(Arrays.asList("haluk", "ipek", "harun", "irem"));
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Bir isim giriniz : ");
+        String isim = scan.nextLine();
+
+        if (ll1.remove(isim)) {
+            System.out.println("Bu isim linkedlist´te vardi ve siliindi.");
+            System.out.println(ll1);
+        } else System.out.println("Bu isim LinkedList'de yok bu yuzden silinemedi");
 
     }
 }
