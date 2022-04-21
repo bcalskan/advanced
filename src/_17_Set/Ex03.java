@@ -1,9 +1,6 @@
 package _17_Set;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Ex03 {
     /* TASK:
@@ -16,10 +13,48 @@ public class Ex03 {
         6.  Hazirlanan bu Set'i de Arraylist'e cevirin
 
      */
+    static List<Integer> liste = new ArrayList<Integer>();
+    static List<Integer> tekrarsizListe = new ArrayList<Integer>();
 
     public static void main(String[] args) {
 
 
+        int elemanSayisi = 30;
+        Random rnd = new Random();
+
+        for (int i = 0; i < elemanSayisi; i++) {
+            int eleman = rnd.nextInt(10);
+            liste.add(eleman);
+        }
+        System.out.println(liste);
+
+        tekrarsiz(liste);
+        seteCevir(liste);
+    }
+
+
+
+    private static void seteCevir(List<Integer> liste) {
+        Set<Integer> setList = new HashSet<Integer>();
+        setList.addAll(liste);
+        System.out.println("Set list : " + setList);
+        arrayListeCevir(setList);
+    }
+
+    private static void arrayListeCevir(Set<Integer> setList) {
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        arrayList.addAll(setList);
+        System.out.println("Array list : " + arrayList);
+    }
+
+    private static void tekrarsiz(List<Integer> liste) {
+
+        for (int i = 0; i < liste.size(); i++) {
+            if (!tekrarsizListe.contains(liste.get(i))) {
+                tekrarsizListe.add(liste.get(i));
+            }
+        }
+        System.out.println("Tekrarsiz : " + tekrarsizListe);
     }
 }
 
