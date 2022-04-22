@@ -3,7 +3,7 @@ package _17_Set;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Ex01 {
+public class Ex01_Ok {
 
     /* TASK:
 parametresi Integer set ve integer array ve adi elementEkle

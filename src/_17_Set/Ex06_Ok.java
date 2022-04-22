@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Random;
 
-public class Ex06 {
+public class Ex06_Ok {
     static HashSet<Integer> setlist = new HashSet<Integer>();
 
     public static void main(String[] args) {

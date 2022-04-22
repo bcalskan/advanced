@@ -2,7 +2,7 @@ package _17_Set;
 
 import java.util.*;
 
-public class Ex03 {
+public class Ex03_Ok {
     /* TASK:
 
         1.  30 elemanli, elemanlari 0-10 arasinda random sayilardan olusan bir arraylist create edin.

@@ -2,7 +2,7 @@ package _17_Set;
 
 import java.util.*;
 
-public class Ex02 {
+public class Ex02_Ok {
 
     /*  Method:
            10 ve 5 elemanli, elemanlari 0-20 arasinda değer alan 2 adet  ArrayList create edin ve

@@ -6,18 +6,18 @@ import java.util.HashSet;
 public class HashSet01 {
     /*
      Set : 1) unique(benzersiz tek) elemanlardan olusur, Set'lerin icinde bir eleman sadece bir kere kullanilabilir. mükerrer(duplicate) eleman olmaz.
-            2) sadece bir null değeri alabilir.(treeSet hariç).Java elementleri unique yapmak icin HASH ALGORITMASI kullanir.
-                 Java her data icin hashing teknigini kullanarak bir code uretir.Bu code'u almak icin HashCode() methodu kullanilir.
-                 Hashing, farklı büyüklükteki girdilerden sabit büyüklükte bir çıktı oluşturma sürecine verilen isimdir.
-                  Universitelerdeki ogrenci numaralari gibi bir ogrenci ismi soruldugunda numarasini bulursaniz onunla ilgili tum datalara ulasilabilir.
+           2) sadece bir null değeri alabilir.(treeSet hariç).Java elementleri unique yapmak icin HASH ALGORITMASI kullanir.
+              Java her data icin hashing teknigini kullanarak bir code uretir.Bu code'u almak icin HashCode() methodu kullanilir.
+              Hashing, farklı büyüklükteki girdilerden sabit büyüklükte bir çıktı oluşturma sürecine verilen isimdir.
+              Universitelerdeki ogrenci numaralari gibi bir ogrenci ismi soruldugunda numarasini bulursaniz onunla ilgili tum datalara ulasilabilir.
 
 
             Set     --> HashSet         : 1) HashSet, duplication’a(tekrarlı eleman) izin vermez.
-                                            Eger bir elemani tekrar HashSet’e eklemek isterseniz eski olan silinip, yeni olan uzerine yazilir.
+                                             Eger bir elemani tekrar HashSet’e eklemek isterseniz eski olan silinip, yeni olan uzerine yazilir.
                                           2) Haset'ler Set'ler arasinda en hizli olanıdir. bir algoritmaya göre kayit eder.
-                                           değerlerin giriş sırasına dikkat edilmez. (LinkedHashSet hariç)
+                                             değerlerin giriş sırasına dikkat edilmez. (LinkedHashSet hariç)
                                           3) HashSet "null" object'ini eleman olarak kullanabilir.
-                                          Ancak birden fazla null degerini bir HashSet’e eklemek isterseniz sadece bir tane null degeri olur.
+                                             Ancak birden fazla null degerini bir HashSet’e eklemek isterseniz sadece bir tane null degeri olur.
 
                         LinkedHashset   : 1) Tekrarli eleman kabul etmezler. Elemanlari ekleme sirasina(insertion order) gore dizerler.
                                           2) LinkedHashSet, HashSet'den daha yavas calisir.
