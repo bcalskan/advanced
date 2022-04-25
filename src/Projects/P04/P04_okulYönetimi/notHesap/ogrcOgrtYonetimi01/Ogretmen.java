@@ -1,4 +1,4 @@
-package Projects.P04.P04_okulYönetimi.ogrcOgrtYonetimi;
+package Projects.P04.P04_okulYönetimi.notHesap.ogrcOgrtYonetimi01;
 
 public class Ogretmen extends Kisi {
 
@@ -37,6 +37,47 @@ public class Ogretmen extends Kisi {
         return "Ogretmen{" +
                 "bolum='" + bolum + '\'' +
                 ", sicilNo='" + sicilNo + '\'' +
-                '}';
+                "} " + super.toString();
     }
+// @Override
+   // public String toString() {
+   //     return "Ogretmen{" +
+   //             "bolum='" + bolum + '\'' +
+   //             ", sicilNo='" + sicilNo + '\'' +
+   //             '}';
+   // }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

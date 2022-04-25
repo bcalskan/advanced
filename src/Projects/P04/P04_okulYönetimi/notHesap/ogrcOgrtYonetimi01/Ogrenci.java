@@ -1,4 +1,4 @@
-package Projects.P04.P04_okulYönetimi.ogrcOgrtYonetimi;
+package Projects.P04.P04_okulYönetimi.notHesap.ogrcOgrtYonetimi01;
 
 public class Ogrenci extends Kisi {
 
@@ -32,13 +32,19 @@ public class Ogrenci extends Kisi {
         return sınıf;
     }
 
-
-
     @Override
     public String toString() {
         return "Ogrenci{" +
                 "ogrcNo='" + ogrcNo + '\'' +
                 ", sınıf='" + sınıf + '\'' +
-                '}';
+                "} " + super.toString();
     }
+
+// @Override
+   // public String toString() {
+   //     return "Ogrenci{" +
+   //             "ogrcNo='" + ogrcNo + '\'' +
+   //             ", sınıf='" + sınıf + '\'' +
+   //             '}';
+   // }
 }

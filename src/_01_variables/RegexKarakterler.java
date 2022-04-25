@@ -1,4 +1,4 @@
-package _01_veriables;
+package _01_variables;
 
 public class RegexKarakterler {
 

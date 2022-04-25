@@ -1,0 +1,10 @@
+package Projects.P04.P04_okulYönetimi.notHesap.ogrcOgrtYonetimi01;
+
+
+import static Projects.P04.P04_okulYönetimi.notHesap.ogrcOgrtYonetimi01.Islemler.girisPaneli;
+
+public class Runner {
+    public static void main(String[] args) {
+        girisPaneli();//static method import edildi
+    }
+}

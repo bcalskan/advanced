@@ -1,4 +1,4 @@
-package Projects.P04.P04_okulYönetimi.ogrcOgrtYonetimi;
+package Projects.P04.P04_okulYönetimi.notHesap.ogrcOgrtYonetimi01;
 
 public class Kisi {
 
@@ -46,7 +46,7 @@ public class Kisi {
 
     @Override
     public String toString() {
-        return "Kisi{" +
+        return "{" +
                 "adSoyad='" + adSoyad + '\'' +
                 ", kimlikNo='" + kimlikNo + '\'' +
                 ", yas=" + yas +
