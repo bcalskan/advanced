@@ -3,32 +3,6 @@ package Projects.Projects_03;
 import java.util.Scanner;
 
 public class SubtractionSquare {
-
-
-
-     /*
-
-    Given one method name is substSquare
-
-    This method get two ints as parameter
-
-    return type is int
-
-    Get  square of the sum of the numbers using getSumOfSquares method ,
-
-    Parameter 1 square of the sum + Parameter 2 square of the sum  = your result
-
-    for example:
-    int 1 = 10
-
-    int 2 = 5;
-
-    3025 + 225 = 3250
-
-    return 3250
-
-     */
-
     /*
    substSquare: bu method parametre olara iki int alır ve  parametreleri getSumOfSquares methodu ile
     return edilen degerlerin toplamını  return eder.
@@ -45,34 +19,33 @@ public class SubtractionSquare {
 
   parametreleri kullanıcıdan alınız
     */
+    static Scanner scan = new Scanner(System.in);
+
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Birinci sayı : ");
-        int num1 = scanner.nextInt();
+        System.out.println("Sayi 1 : ");
+        int sayi1 = scan.nextInt();
 
-        System.out.print("İkinci sayı : ");
-        int num2 = scanner.nextInt();
+        System.out.println("Sayi 2 : ");
+        int sayi2 = scan.nextInt();
 
-        int sonuc = substSquare(num1, num2);
+        int sonuc = substSquare(sayi1, sayi2);
         System.out.println(sonuc);
-    }
-    public static int getSumOfSquares(int n) {
 
-        int sum = 0;
+    }
+
+    private static int substSquare(int sayi1, int sayi2) {
+        return getSumOfSquares(sayi1) + getSumOfSquares(sayi2);
+    }
+
+    private static int getSumOfSquares(int n) {
+        int toplam1 = 0;
+
         for (int i = 0; i <= n; i++) {
-            sum += i;
-
+            toplam1 += i;
         }
-        return sum * sum;
-
+        return toplam1*toplam1;
     }
-        public static int  substSquare(int num1 , int num2){
-
-            return getSumOfSquares(num1) + getSumOfSquares(num2);
-
-        }
-
 
 
 }
