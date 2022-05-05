@@ -12,6 +12,16 @@ public class Q01 {
 
 		 */
 
+        String str = "I love Java";
+        StringBuilder sb = new StringBuilder(str);
+        String str1 = sb.reverse().toString();
+
+        System.out.println(str1);
+
+        if (str.equals(str1)){
+            System.out.println("Palindrome");
+        }else System.out.println("Degil");
+
     }
 
 }
